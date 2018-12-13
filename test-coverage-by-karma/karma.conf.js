@@ -5,7 +5,8 @@ module.exports = function (config) {
         frameworks: [
             'jasmine',
             "openui5",
-            "requirejs"
+            "requirejs",
+            "browserify"
         ],
         openui5: {
             path: "https://sapui5.hana.ondemand.com/resources/sap-ui-core.js",
@@ -73,7 +74,8 @@ module.exports = function (config) {
             'karma-coverage',
             'karma-openui5',
             'karma-requirejs',
-            'browserify-istanbul'
+            'browserify-istanbul',
+            "karma-browserify"
         ]
     });
 };
