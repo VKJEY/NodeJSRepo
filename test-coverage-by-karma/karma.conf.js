@@ -6,7 +6,8 @@ module.exports = function (config) {
             'jasmine',
             "openui5",
             "requirejs",
-            "browserify"
+            "browserify",
+            "mocha"
         ],
         openui5: {
             path: "https://sapui5.hana.ondemand.com/resources/sap-ui-core.js",
@@ -22,14 +23,24 @@ module.exports = function (config) {
                         "sap.bpm": "base/target/sap/bpm"
                     }
                 }
-            }
+            },
+            mocha: {
+                // change Karma's debug.html to the mocha web reporter
+                reporter: 'html',
+        
+                // require specific files after Mocha is initialized
+                //require: [require.resolve('bdd-lazy-var/bdd_lazy_var_global')],
+        
+                // custom ui, defined in required file above
+                //ui: 'bdd-lazy-var/global',
+              }
         },
 
         "browserify": {
             "debug": true,
             "transform": ["browserify-istanbul"]
         },
-        reporters: ['progress', 'coverage'],
+        reporters: ["progress", 'dots', "growl", "mocha", 'coverage', 'kjhtml'],
         coverageReporter: {
             includeAllSources: true,
             dir: 'coverage/',
@@ -75,7 +86,11 @@ module.exports = function (config) {
             'karma-openui5',
             'karma-requirejs',
             'browserify-istanbul',
-            "karma-browserify"
+            "karma-browserify",
+            "karma-mocha",
+            "karma-jasmine-html-reporter",
+            "karma-mocha-reporter",
+            "karma-growl-reporter"
         ]
     });
 };
