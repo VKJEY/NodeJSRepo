@@ -7,5 +7,5 @@ The project aims to showcase how Plain JS Tests and Tests that uses SAPUI5 contr
 - At the root run: **npm install**
 - Run: **npm test**
 - From your file System, 
-- Open **coverage/html/index.html** to view the Coverage.
+- Open **coverage/html/index.html** in your browser to view the Test Coverage results.
 - Alternatively, coverages are displayed in the console as well.
