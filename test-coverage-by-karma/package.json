@@ -1,0 +1,26 @@
+{
+  "name": "test-coverage-by-karma",
+  "version": "1.0.0",
+  "description": "A Project to showcase how Test coverage can be generated for SAPUI5 artifacts using karma",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start"
+  },
+  "author": "Vikash Jha",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify-istanbul": "^3.0.1",
+    "jasmine-core": "^3.3.0",
+    "karma": "^3.1.3",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.2",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-mocha": "^1.3.0",
+    "karma-openui5": "^0.2.3",
+    "karma-requirejs": "^1.1.0",
+    "mocha": "^5.2.0",
+    "requirejs": "^2.3.6",
+    "watchify": "^3.11.0"
+  }
+}
